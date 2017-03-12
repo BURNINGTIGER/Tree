@@ -1,3 +1,5 @@
+#include "matrix.hpp"
+
 Matrix::Matrix()
 {
 	st = cl = 2;
