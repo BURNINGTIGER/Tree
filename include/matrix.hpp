@@ -15,8 +15,8 @@ public:
 	Matrix(int, int);
 	Matrix(Matrix &matrс);
 	~Matrix();
-	int str();
-	int col();
+	int rows();
+	int columns();
 	Matrix operator+ (const Matrix &mat_2) const;
 	Matrix operator* (const Matrix &mat_2) const;
 	Matrix& operator =(Matrix &);
