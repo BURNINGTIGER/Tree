@@ -1,11 +1,9 @@
 #include "matrix.hpp"
 
-Matrix::Matrix()
+using namespace std;
+
+Matrix::Matrix(): st(0), cl(0), matr{nullptr}
 {
-	st = cl = 2;
-	matr= new int*[st];
-	for (int i = 0; i < st; i++)
-		matr[i] = new int[cl]();
 }
 
 Matrix::Matrix(int m, int n) : st(m), cl(n)
@@ -115,4 +113,14 @@ ostream& operator << (ostream& out, const Matrix& mat)
 		out << endl;
 	}
 	return out;
+}
+
+int Matrix::str()
+{
+	return st;
+}
+
+int Matrix::col()
+{
+	return cl;
 }
