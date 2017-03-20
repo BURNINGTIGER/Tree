@@ -70,6 +70,13 @@ Matrix Matrix::operator*(const Matrix &mat_2) const
 
 Matrix& Matrix::operator =(Matrix &matrc)
 {
+	for (int i = 0; i < n; i++)
+		delete[] matr[i];	
+	delete[] matr;
+	st = matrc.st;
+	cl = matrc.cl;
+	for (int i = 0; i < matrc.st; i++)
+		matr[i] = new int[matrc.cl];
 	for (int i = 0; i < st; i++)
 	for (int j = 0; j < cl; j++)
 		matr[i][j] = matrc.matr[i][j];
