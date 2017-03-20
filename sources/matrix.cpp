@@ -70,7 +70,7 @@ Matrix Matrix::operator*(const Matrix &mat_2) const
 
 Matrix& Matrix::operator =(Matrix &matrc)
 {
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < st; i++)
 		delete[] matr[i];	
 	delete[] matr;
 	st = matrc.st;
@@ -122,12 +122,12 @@ ostream& operator << (ostream& out, const Matrix& mat)
 	return out;
 }
 
-int Matrix::str()
+int Matrix::rows()
 {
 	return st;
 }
 
-int Matrix::col()
+int Matrix::columns()
 {
 	return cl;
 }
