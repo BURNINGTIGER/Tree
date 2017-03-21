@@ -13,14 +13,14 @@ private:
 public:
 	Matrix();
 	Matrix(int, int);
-	Matrix(Matrix &matrc);
+	Matrix(Matrix const &matrc);
 	~Matrix();
-	int rows();
-	int columns();
+	int rows()const;
+	int columns()const;
 	Matrix operator+ (const Matrix &mat_2) const;
 	Matrix operator* (const Matrix &mat_2) const;
 	Matrix& operator =(Matrix &);
 	bool operator==(const Matrix&)const;
-	friend istream& operator >> (istream& ist, const Matrix& cmatr);
+	friend istream& operator >> (istream& ist, Matrix& cmatr);
 	friend ostream& operator << (ostream&, const Matrix&);
 };
