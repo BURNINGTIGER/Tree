@@ -13,7 +13,7 @@ private:
 public:
 	Matrix();
 	Matrix(int, int);
-	Matrix(Matrix &matrс);
+	Matrix(Matrix &matrc);
 	~Matrix();
 	int rows();
 	int columns();
