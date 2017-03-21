@@ -1,6 +1,6 @@
 # matrix
 
-[![Build Status](https://travis-ci.org/justcppdeveloper/matrix.svg?branch=master)](https://travis-ci.org/BURNINGTIGER/matrix)
+[![Build Status](https://travis-ci.org/BURNINGTIGER/matrix.svg?branch=master)](https://travis-ci.org/BURNINGTIGER/matrix)
 
 matrix methods:
 - [x] rows
