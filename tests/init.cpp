@@ -26,7 +26,7 @@ SCENARIO("copy", "[copy]")
 	REQUIRE(copy.columns() == 2);
 }
 
-SCENARIO("+", "[+]")
+SCENARIO("m+", "[m+]")
 {
 	Matrix A(2, 2);
 	Matrix B(2, 2);
@@ -37,7 +37,7 @@ SCENARIO("+", "[+]")
 	REQUIRE((A + B) == C);
 }
 
-SCENARIO("*", "[*]")
+SCENARIO("m*", "[m*]")
 {
 	Matrix A (2, 2);
 	Matrix B (2, 2);
@@ -48,7 +48,7 @@ SCENARIO("*", "[*]")
 	REQUIRE((A*B) == C);
 }
 
-SCENARIO("=", "[=]")
+SCENARIO("m=", "[m=]")
 {
 	Matrix A(2, 2);
 	Matrix B = A;
