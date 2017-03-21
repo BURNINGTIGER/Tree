@@ -13,7 +13,7 @@ Matrix::Matrix(int m, int n) : st(m), cl(n)
 		matr[i] = new int[n]();
 }
 
-Matrix::Matrix(Matrix &matrc)
+Matrix::Matrix(const Matrix  &matrc)
 {
 	matr = new int*[matrc.st];
 	for (int i = 0; i < matrc.st; i++)
@@ -103,7 +103,7 @@ bool Matrix::operator==(const Matrix& com)const
 	return res;
 }
 
-istream& operator >> (istream& in, const Matrix& mat)
+istream& operator >> (istream& in, Matrix& mat)
 {
 	for (int i = 0; i < mat.st; i++)
 	for (int j = 0; j < mat.cl; j++)
@@ -122,12 +122,12 @@ ostream& operator << (ostream& out, const Matrix& mat)
 	return out;
 }
 
-int Matrix::rows()
+int Matrix::rows() const
 {
 	return st;
 }
 
-int Matrix::columns()
+int Matrix::columns() const
 {
 	return cl;
 }
