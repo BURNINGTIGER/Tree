@@ -23,12 +23,5 @@ SCENARIO("copy", "[copy]")
 	Matrix m1(init, init);
 	Matrix copy(m1);
 	REQUIRE(copy.rows() == 2);
-	REQUIRE(copy.columns() == 2);
-}
 
-SCENARIO("m+", "[m+]")
-{
-	Matrix A(2, 2);
-	Matrix B(2, 2);
-	
 
