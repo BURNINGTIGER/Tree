@@ -4,20 +4,20 @@
 
 SCENARIO ("init", "[init]")
 {
-  BinaryTree<int> obj;
-  REQUIRE(obj.root_() == nullptr);
+  BinaryTree<int> tree;
+  REQUIRE(tree.root_() == nullptr);
 }
 
 SCENARIO ("output", "[output]")
 {
   BinaryTree<int> tree;
-  tree.insert_node(3);
+  tree.insertNode(1);
   REQUIRE( std::cout << tree );
 }
 
 SCENARIO("findNode", "[findNode]")
   {
-    BinaryTree<int> obj;
+    BinaryTree<int> tree;
     obj.insert_node(4);
     obj.insert_node(2);
     REQUIRE(obj.find_node(2, obj.root_()) != nullptr);
