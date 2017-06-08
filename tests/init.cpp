@@ -30,13 +30,5 @@ SCENARIO("m+", "[m+]")
 {
 	Matrix A(2, 2);
 	Matrix B(2, 2);
-	Matrix C(2, 2);
-	std::ifstream ("f1.txt") >> A;
-	std::ifstream ("f2.txt") >> B;
-	std::ifstream ("f3.txt") >> C;
-	REQUIRE((A + B) == C);
-}
-
-S
-
+	
 
