@@ -15,40 +15,40 @@ SCENARIO ("output", "[output]")
   REQUIRE( std::cout << tree );
 }
 
-SCENARIO("findNode", "[findNode]")
+SCENARIO("find", "[find]")
   {
     BinaryTree<int> tree;
-    tree.insert_node(4);
-    tree.insert_node(2);
-    REQUIRE(tree.find_node(2, tree.root_()) != nullptr);
-    REQUIRE(tree.find_node(2, tree.root_())->data == 2);
+    tree.insertNode(4);
+    tree.insertNode(2);
+    REQUIRE(tree.findNode(2, tree.root_()) != nullptr);
+    REQUIRE(tree.findNode(2, tree.root_())->data == 2);
   }
 
 SCENARIO("insert", "[insert]")
 {
   BinaryTree<int> tree;
-  tree.insert_node(3);
-  REQUIRE(tree.find_node(3, tree.root_())->data == 3);
+  tree.insertNode(3);
+  REQUIRE(tree.findNode(3, tree.root_())->data == 3);
 }
 
-SCENARIO("removeElement", "[remEl]")
+SCENARIO("remove", "[remove]")
 {
   BinaryTree<int> obj;
-  tree.insert_node(1);
-  tree.insert_node(2);
-  tree.insert_node(3);
+  tree.insertNode(1);
+  tree.insertNode(2);
+  tree.insertNode(3);
   tree.deleteVal(1);
-  REQUIRE(tree.find_node(1, tree.root_())== nullptr);
-  REQUIRE(tree.find_node(2, tree.root_())== tree.root_());
+  REQUIRE(tree.findNode(1, tree.root_())== nullptr);
+  REQUIRE(tree.findNode(2, tree.root_())== tree.root_());
   REQUIRE(tree.root_() != nullptr);
 }
 
-SCENARIO("DEL", "[Del]")
+SCENARIO("delete", "[delete]")
 {
   BinaryTree<int> tree;
-  tree.insert_node(1);
-  tree.insert_node(2);
-  tree.deleteVal(2);
+  tree.insertNode(1);
+  tree.insertNode(2);
+  tree.deleteValue(2);
   REQUIRE(obj.getCount() == 1);
 }
 
