@@ -79,8 +79,8 @@ void BinaryTree<T>::insertNode(const T&x)
 {
 	if (findNode(x, root_())) return;
 	Node<T>* Tree = new Node<T>;
-	MyTree->data = x;
-	MyTree->left = Tree->right = 0;
+	Tree->data = x;
+	Tree->left = Tree->right = 0;
 	Node<T>* buff = root;
 	Node<T>* temp = root;
 	while (temp)
