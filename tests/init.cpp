@@ -37,7 +37,7 @@ SCENARIO("remove", "[remove]")
   tree.insertNode(1);
   tree.insertNode(2);
   tree.insertNode(3);
-  tree.deleteVal(1);
+  tree.deleteValue(1);
   REQUIRE(tree.findNode(1, tree.root_())== nullptr);
   REQUIRE(tree.findNode(2, tree.root_())== tree.root_());
   REQUIRE(tree.root_() != nullptr);
