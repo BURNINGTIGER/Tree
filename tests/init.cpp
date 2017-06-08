@@ -17,11 +17,6 @@ SCENARIO("params init", "[init with params]") {
 	REQUIRE(matrix.columns() == 5);
 }
 
-SCENARIO("copy", "[copy]")
-{
-	int init = 2;
-	Matrix m1(init, init);
-	Matrix copy(m1);
-	REQUIRE(copy.rows() == 2);
+
 
 
