@@ -55,12 +55,4 @@ SCENARIO("m=", "[m=]")
 	REQUIRE(B == A);
 }
 
-SCENARIO("read", "[read]")
-{
-	Matrix A(2, 2);
-	Matrix B (2, 2);
-	std::ifstream("f1.txt") >> A;
-	std::ofstream("f5.txt") << A;
-	std::ifstream("f5.txt") >> B;
-	REQUIRE(B == A);
-}
+
