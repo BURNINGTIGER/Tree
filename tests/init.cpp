@@ -18,22 +18,22 @@ SCENARIO ("output", "[output]")
 SCENARIO("find", "[find]")
   {
     BinaryTree<int> tree;
-    tree.insertNode(4);
     tree.insertNode(2);
-    REQUIRE(tree.findNode(2, tree.root_()) != nullptr);
-    REQUIRE(tree.findNode(2, tree.root_())->data == 2);
+    tree.insertNode(3);
+    REQUIRE(tree.findNode(3, tree.root_()) != nullptr);
+    REQUIRE(tree.findNode(3, tree.root_())->data == 3);
   }
 
 SCENARIO("insert", "[insert]")
 {
   BinaryTree<int> tree;
-  tree.insertNode(3);
-  REQUIRE(tree.findNode(3, tree.root_())->data == 3);
+  tree.insertNode(4);
+  REQUIRE(tree.findNode(4, tree.root_())->data == 4);
 }
 
 SCENARIO("remove", "[remove]")
 {
-  BinaryTree<int> obj;
+  BinaryTree<int> tree;
   tree.insertNode(1);
   tree.insertNode(2);
   tree.insertNode(3);
@@ -49,7 +49,7 @@ SCENARIO("delete", "[delete]")
   tree.insertNode(1);
   tree.insertNode(2);
   tree.deleteValue(2);
-  REQUIRE(obj.getCount() == 1);
+  REQUIRE(tree.getCount() == 1);
 }
 
 
