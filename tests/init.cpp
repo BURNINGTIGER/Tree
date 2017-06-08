@@ -2,9 +2,55 @@
 #include <catch.hpp>
 #include <iostream>
 
-using namespace std;
+SCENARIO ("init", "[init]")
+{
+  BinaryTree<int> obj;
+  REQUIRE(obj.root_() == nullptr);
+}
 
+SCENARIO ("output", "[output]")
+{
+  BinaryTree<int> tree;
+  tree.insert_node(3);
+  REQUIRE( std::cout << tree );
+}
 
+SCENARIO("findNode", "[findNode]")
+  {
+    BinaryTree<int> obj;
+    obj.insert_node(4);
+    obj.insert_node(2);
+    REQUIRE(obj.find_node(2, obj.root_()) != nullptr);
+    REQUIRE(obj.find_node(2, obj.root_())->data == 2);
+  }
+
+SCENARIO("insert", "[insert]")
+{
+  BinaryTree<int> obj;
+  obj.insert_node(3);
+  REQUIRE(obj.find_node(3, obj.root_())->data == 3);
+}
+
+SCENARIO("removeElement", "[remEl]")
+{
+  BinaryTree<int> obj;
+  obj.insert_node(1);
+  obj.insert_node(2);
+  obj.insert_node(3);
+  obj.deleteVal(1);
+  REQUIRE(obj.find_node(1, obj.root_())== nullptr);
+  REQUIRE(obj.find_node(2, obj.root_())== obj.root_());
+  REQUIRE(obj.root_() != nullptr);
+}
+
+SCENARIO("DEL", "[Del]")
+{
+  BinaryTree<int> obj;
+  obj.insert_node(1);
+  obj.insert_node(2);
+  obj.deleteVal(2);
+  REQUIRE(obj.getCount() == 1);
+}
 
 
 
