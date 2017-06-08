@@ -48,11 +48,5 @@ SCENARIO("m*", "[m*]")
 	REQUIRE((A*B) == C);
 }
 
-SCENARIO("m=", "[m=]")
-{
-	Matrix A(2, 2);
-	Matrix B = A;
-	REQUIRE(B == A);
-}
 
 
