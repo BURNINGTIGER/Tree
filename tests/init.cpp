@@ -47,6 +47,7 @@ SCENARIO("remove", "[remove]")
 SCENARIO("removea", "[removea]")
 {
   BinaryTree<int> tree;
+  tree.insertNode(7);
   tree.insertNode(3);
   tree.insertNode(2);
   tree.insertNode(1);
@@ -55,7 +56,6 @@ SCENARIO("removea", "[removea]")
   tree.insertNode(6);
   tree.deleteValue(3);
   REQUIRE(tree.findNode(3, tree.root_())== nullptr);
-  REQUIRE(tree.findNode(5, tree.root_())== tree.root_());
   REQUIRE(tree.root_() != nullptr);
 }
 
