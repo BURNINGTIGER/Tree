@@ -166,7 +166,6 @@ bool BinaryTree<T>::removeElement(Node<T>* parent, Node<T>* current, const T& va
 			else {
 				this->root = temp;
 			}
-			delete current;
 		}
 		/*else {
 			Node<T>* validSubs = current->right;
@@ -186,14 +185,14 @@ bool BinaryTree<T>::removeElement(Node<T>* parent, Node<T>* current, const T& va
 			validSubs->right = current->right->left;
 			//current->right->left = nullptr;
 			current->right->left = current->left;
-			if (parent == current)
-				current = current->right;
+			/*if (parent == current)
+				current = current->right;*/
 			if (parent->left == current)
 				parent->left = current->right;
 			if (parent->right == current)
 				parent->right = current->right;
 		}
-		//delete current;
+		delete current;
 		count--;
 		return true;
 	}
